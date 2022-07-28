@@ -93,7 +93,7 @@ class ParentWindow(Frame):
             aged = curTime - t1
             #
             #If the modTime datetime is less than the "aged" 24 hour time, do the following
-            if modTime < aged:
+            if modTime > aged:
                 #moves each file from the source to the destination
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred.')
