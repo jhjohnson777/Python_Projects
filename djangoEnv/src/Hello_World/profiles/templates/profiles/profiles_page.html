@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Hello World{% endblock %}
+
+{% block header %}Welcome to my world, &nbsp;{{ user | title }}.{% endblock %}
+
+{% block content %}This is my content section.
+{% for profile in profiles %}
+    <ul>
+        <li>Hello,&nbsp;{{ profile }}</li>
+    </ul>
+{% endfor %}
+{% endblock %}
